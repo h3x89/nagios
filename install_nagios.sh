@@ -414,4 +414,4 @@ echo "all_hosts = [ 'nagios' ]" >> /etc/check_mk/main.mk
 cmk -Ivp
 cmk -Rvp
 
-
+bash ./pnp.sh
