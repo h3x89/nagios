@@ -1,8 +1,0 @@
-livestatus_so-opids.o: opids.cc /usr/include/stdc-predef.h opids.h \
- ../config.h
-
-/usr/include/stdc-predef.h:
-
-opids.h:
-
-../config.h:
