@@ -1,6 +1,10 @@
 # based on :
 # https://www.digitalocean.com/community/tutorials/how-to-install-nagios-4-and-monitor-your-servers-on-ubuntu-14-04
+<<<<<<< HEAD
 # http://www.unixmen.com/how-to-install-nagios-4-1-in-ubuntu-15-04/
+=======
+#
+>>>>>>> 69c4de190954492e65c71babf285fe2a7c3cd768
 # TO-DO
 # add check_mk server with client
 #
@@ -16,6 +20,7 @@ usermod -a -G nagcmd nagios
 
 cd ~
 
+<<<<<<< HEAD
 #curl -L -O https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.1.1.tar.gz
 #tar xvfz nagios-4.1.1.tar.gz
 #cd nagios-4.1.1
@@ -23,6 +28,14 @@ cd ~
 wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.1.0rc2.tar.gz
 tar nagios-4.1.0rc2.tar.gz
 cd nagios-4.1.0rc2
+=======
+curl -L -O https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.1.1.tar.gz
+
+tar xvfz nagios-4.1.1.tar.gz
+
+cd nagios-4.1.1
+
+>>>>>>> 69c4de190954492e65c71babf285fe2a7c3cd768
 
 #Before building Nagios, we must configure it. If you want to configure it to use postfix (which you can install with apt-get), add -–with-mail=/usr/sbin/sendmail to the following command:
 
