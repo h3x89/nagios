@@ -3,7 +3,10 @@ apt-get install make rrdtool librrds-perl g++ php5-cli php5-gd libapache2-mod-ph
 
 cd /root/nagios
 
-wget http://downloads.sourceforge.net/project/pnp4nagios/PNP-0.6/pnp4nagios-0.6.24.tar.gz
+if [ ! -f pnp4nagios-0.6.24.tar.gz ];then
+	wget http://downloads.sourceforge.net/project/pnp4nagios/PNP-0.6/pnp4nagios-0.6.24.tar.gz
+fi
+
 tar -xzvf pnp4nagios-0.6.24.tar.gz
 
 cd pnp4nagios-0.6.24
