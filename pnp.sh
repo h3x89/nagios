@@ -67,6 +67,26 @@ define command{
        command_line    /usr/local/pnp4nagios/libexec/process_perfdata.pl --bulk=/usr/local/pnp4nagios/var/host-perfdata
 }
 
+# Bulk with NPCD mode
+
+#
+
+define command {
+
+command_name process-service-perfdata-file
+
+command_line /bin/mv /usr/local/pnp4nagios/var/service-perfdata /usr/local/pnp4nagios/var/spool/service-perfdata.$TIMET$
+
+}
+
+define command {
+
+command_name process-host-perfdata-file
+
+command_line /bin/mv /usr/local/pnp4nagios/var/host-perfdata /usr/local/pnp4nagios/var/spool/host-perfdata.$TIMET$
+
+}
+
 EOF
 
 
