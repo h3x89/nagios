@@ -403,14 +403,13 @@ tar xvfz check_mk-1.2.7i2p3.tar.gz
 cd check_mk-1.2.7i2p3
 
 cp /root/nagios/.check_mk_setup.conf /root/
-
-
-
-#### DODAC CONFIG INSTALACJI /root/.check_mk_setup.conf
 ./setup.sh
 
 tar xvfz agents.tar.gz
 dpkg -i check-mk-agent_1.2.7i2p3-1_all.deb
+
+echo 127.0.0.1    nagios >> /etc/hosts
+echo "all_hosts = [ 'nagios' ]" >> /etc/check_mk/main.mk
 
 cmk -Ivp
 cmk -Rvp
