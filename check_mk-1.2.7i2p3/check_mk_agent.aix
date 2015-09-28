@@ -1,0 +1,278 @@
+#!/usr/bin/ksh93
+# +------------------------------------------------------------------+
+# |             ____ _               _        __  __ _  __           |
+# |            / ___| |__   ___  ___| | __   |  \/  | |/ /           |
+# |           | |   | '_ \ / _ \/ __| |/ /   | |\/| | ' /            |
+# |           | |___| | | |  __/ (__|   <    | |  | | . \            |
+# |            \____|_| |_|\___|\___|_|\_\___|_|  |_|_|\_\           |
+# |                                                                  |
+# | Copyright Mathias Kettner 2014             mk@mathias-kettner.de |
+# +------------------------------------------------------------------+
+#
+# This file is part of Check_MK.
+# The official homepage is at http://mathias-kettner.de/check_mk.
+#
+# check_mk is free software;  you can redistribute it and/or modify it
+# under the  terms of the  GNU General Public License  as published by
+# the Free Software Foundation in version 2.  check_mk is  distributed
+# in the hope that it will be useful, but WITHOUT ANY WARRANTY;  with-
+# out even the implied warranty of  MERCHANTABILITY  or  FITNESS FOR A
+# PARTICULAR PURPOSE. See the  GNU General Public License for more de-
+# ails.  You should have  received  a copy of the  GNU  General Public
+# License along with GNU Make; see the file  COPYING.  If  not,  write
+# to the Free Software Foundation, Inc., 51 Franklin St,  Fifth Floor,
+# Boston, MA 02110-1301 USA.
+
+# force load of environment
+if [ -e $HOME/.profile ]
+then
+    . $HOME/.profile
+fi
+
+# Remove locale settings to eliminate localized outputs where possible
+export LC_ALL=C
+unset LANG
+
+export MK_LIBDIR="/usr/check_mk/lib"
+export MK_CONFDIR="/usr/check_mk/conf"
+export MK_VARDIR="/tmp/check_mk"
+
+# All executables in PLUGINSDIR will simply be executed and their
+# ouput appended to the output of the agent. Plugins define their own
+# sections and must output headers with '<<<' and '>>>'
+PLUGINSDIR=$MK_LIBDIR/plugins
+
+# All executables in LOCALDIR will by executabled and their
+# output inserted into the section <<<local>>>. Please refer
+# to online documentation for details.
+LOCALDIR=$MK_LIBDIR/local
+
+#Avoid problems with wrong decimal separators in other language verions of aix
+export LC_NUMERIC="en_US"
+
+# close standard input (for security reasons) and stderr
+if [ "$1" = -d ]
+then
+    set -xv
+else
+    exec <&- 2>/dev/null
+fi
+
+# Shell version of the waitmax utility, that limits the runtime of
+# commands. This version does not conserve the original exit code
+# of the command. It is successfull if the command terminated
+# in time.
+function waitmax
+{
+   TIMEOUT=${1}0
+   SIGNAL=9
+   shift
+
+   # Run command in background
+   ksh -c "$*" &
+   PID=$!
+
+   # Wait for termination within TIMOUT seconds
+   while [ $TIMEOUT -gt 0 ]
+   do
+       TIMEOUT=$((TIMEOUT - 1))
+       if [ ! -e /proc/$PID ] ; then
+           return 0
+       fi
+       perl -e "select(undef, undef, undef, 0.1);"
+   done
+
+   # Process did not terminate in time. Kill and
+   # return with an error
+   kill -9 $PID
+   return 255
+}
+
+function run_cached {
+    NAME=$1
+    MAXAGE=$2
+    shift 2
+    CMDLINE=$*
+    MAXAGE=$MAXAGE*60
+
+    if [ ! -e $MK_VARDIR/cache ] ; then mkdir $MK_VARDIR/cache ; fi
+    CACHE_FILE=$MK_VARDIR/cache/$NAME.cache
+
+    USE_CACHE_FILE=""
+    # Check if file exists and is recent enough
+    if [ -s $CACHE_FILE ]
+    then
+        MTIME=$(/usr/bin/perl -e 'if (! -f $ARGV[0]){die "0000000"};$mtime=(stat($ARGV[0]))[9];print ($^T-$mtime);' $CACHE_FILE )
+        if (( $MTIME < $MAXAGE )) ; then
+            USE_CACHE_FILE=1
+        fi
+    fi
+    if [ -s "$CACHE_FILE" ]
+    then
+        cat $CACHE_FILE
+    fi
+    if [ -z "$USE_CACHE_FILE" -a ! -e "$CACHE_FILE.new" ]
+    then
+        nohup sh -c $CMDLINE > $CACHE_FILE.new 2> /dev/null && mv $CACHE_FILE.new $CACHE_FILE  &
+    fi
+}
+
+echo '<<<check_mk>>>'
+echo Version: 1.2.7i2p3
+echo AgentOS: aix
+echo Hostname: $(hostname)
+
+echo '<<<df>>>'
+if [ -x /usr/opt/freeware/bin/df ] ; then
+    excludefs="-x smbfs -x cifs -x iso9660 -x udf -x nfsv4 -x nfs -x mvfs -x zfs"
+    /usr/opt/freeware/bin/df -PTlk $excludefs | sed 1d
+else
+    df -kP | sed 's/ / - /' | grep -v ^/proc | grep -v ^Filesystem | grep -v :
+fi
+
+# Check for hanging NFS mounts. This needs a GNU stat installed in the PATH
+if type stat >/dev/null 2>&1 ; then
+    echo '<<<nfsmounts>>>'
+     mount | grep ' nfs' | awk '{print $3;}' | \
+        while read MP
+	do
+	    waitmax 2 stat -f -c '"'$MP' ok - - - -"' "$MP" || \
+		echo "$MP hanging 0 0 0 0"
+	done
+    echo '<<<cifsmounts>>>'
+     mount | grep ' cifs' | awk '{print $3;}' | \
+        while read MP
+	do
+	    waitmax 2 stat -f -c '"'$MP' ok - - - -"' "$MP" || \
+		echo "$MP hanging 0 0 0 0"
+	done
+fi
+
+echo '<<<ps>>>'
+ps -ef -F user,vszsize,rssize,pcpu,args | sed -e 1d -e 's/ *\([^ ]*\) *\([^ ]*\) *\([^ ]*\) *\([^ ]*\) */(\1,\2,\3,\4) /'
+
+if type lparstat >/dev/null 2>&1
+then
+  echo '<<<lparstat_aix>>>'
+  lparstat 1 1
+fi
+
+echo '<<<vmstat_aix>>>'
+vmstat | tail -n1
+
+echo '<<<aix_diskiod>>>'
+iostat -d | tr -s ' ' | grep hdisk
+
+echo '<<<aix_memory>>>'
+vmstat -v  | tr -s ' '
+swap -s
+
+echo '<<<mpstat_aix>>>'
+mpstat -a | tail -n1
+
+# CPU output of Linux agent simulated
+# (thanks to Cameron Pierce)
+echo '<<<cpu>>>'
+load=`uptime|sed -e 's;.*average: \([[:digit:]]\{1,\}\.[[:digit:]]\{1,\}\), \([[:digit:]]\{1,\}\.[[:digit:]]\{1,\}\), \([[:digit:]]\{1,\}\.[[:digit:]]\{1,\}\);\1 \2 \3;'`
+ps=`ps -eo thcount | awk '{SUM+=$1} END {print SUM}'`
+procs=`vmstat|grep lcpu|sed -e 's;.* lcpu=\([[:digit:]]\{1,4\}\) .*;\1;'`
+echo $load 1/$ps $$ $procs
+
+
+echo "<<<aix_if>>>"
+for ent in $(ifconfig -a | grep '^en' | cut -d ":" -f 1)
+do
+    echo "[$ent]"
+    entstat $ent | grep -E "(^Hardware|^Bytes:|^Packets:|^Transmit:|^Broadcast:|^Multicast:)"
+    entstat $ent | grep -p "Driver Flags:"
+done
+
+
+if which ntpq > /dev/null 2>&1 ; then
+    if [ $(lssrc -s xntpd|grep -c active) -gt 0 ] ; then
+        echo '<<<ntp>>>'
+        ntpq -np | sed -e 1,2d -e 's/^\(.\)/\1 /' -e 's/^ /%/'
+    fi
+fi
+
+
+echo '<<<aix_multipath>>>'
+    lspath -F"name parent status"
+
+
+echo '<<<aix_lvm>>>'
+    # -L disables LVM lock for the query. Avoids blocking while LVM is
+    # doing changes. For rootvg that is fine.
+    lsvg -L -l rootvg
+
+
+echo '<<<tcp_conn_stats>>>'
+netstat -ntfinet | awk ' /^tcp/ { c[$6]++; } END { for (x in c) { print x, c[x]; } }'
+
+# Libelle Business Shadow
+if type trd >/dev/null 2>&1
+then
+  echo '<<<libelle_business_shadow:sep(58)>>>'
+  $(which trd) -s
+fi
+
+
+echo '<<<uptime>>>'
+uptime | awk '{print $3,$5}' | tr ":" " " | sed 's/,//' | awk '{a=86400*int($1)+3600*int($2)+60*int($3);printf("%d\n",a)}'
+
+
+if cd $PLUGINSDIR 2>/dev/null
+then
+    for skript in $(ls)
+    do
+        if [ -x "$skript" ] ; then
+            ./$skript
+    fi
+  done
+
+  # Call some plugins only every X'th second
+  for skript in [1-9]*/* ; do
+      if [ -x "$skript" ] ; then
+          run_cached plugins_${skript//\//\#} ${skript%/*} "$skript"
+      fi
+  done
+fi
+
+# Fileinfo-Check: put patterns for files into /etc/check_mk/fileinfo.cfg
+if [ -r "$MK_CONFDIR/fileinfo.cfg" ]; then
+   echo '<<<fileinfo:sep(124)>>>'
+   date +%s
+   # simulate output of the Linux "stat -c "%n|%s|%Y" command
+   /usr/bin/perl -e 'printf "$_|%s|%s\n", (stat) [7,9] for @ARGV' $(cat "$MK_CONFDIR/fileinfo.cfg")
+fi
+
+echo '<<<local>>>'
+if cd $LOCALDIR 2>/dev/null
+then
+  for skript in $(ls)
+  do
+    if [ -x "$skript" ] ; then
+        ./$skript
+    fi
+  done
+
+  # Call some local checks only every X'th second
+  for skript in [1-9]*/* ; do
+      if [ -x "$skript" ] ; then
+          run_cached local_${skript//\//\#} ${skript%/*} "$skript"
+      fi
+  done
+fi
+
+# MK's Remote Plugin Executor
+if [ -e "$MK_CONFDIR/mrpe.cfg" ]
+then
+    echo '<<<mrpe>>>'
+    grep -Ev '^[[:space:]]*($|#)' "$MK_CONFDIR/mrpe.cfg" | \
+    while read descr cmdline
+    do
+        PLUGIN=${cmdline%% *}
+        OUTPUT=$($cmdline)
+        echo "(${PLUGIN##*/}) $descr $? $OUTPUT"
+    done
+fi

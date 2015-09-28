@@ -1,0 +1,661 @@
+configure
+aclocal.m4
+config.guess
+config.h.in
+config.sub
+configure.ac
+ltmain.sh
+Makefile.am
+Makefile.in
+missing
+nagios/README
+nagios/broker.h
+nagios/cgiauth.h
+nagios/cgiutils.h
+nagios/comments.h
+nagios/common.h
+nagios/config.h
+nagios/downtime.h
+nagios/locations.h
+nagios/macros.h
+nagios/nagios.h
+nagios/nebcallbacks.h
+nagios/neberrors.h
+nagios/nebmods.h
+nagios/nebmodules.h
+nagios/nebstructs.h
+nagios/objects.h
+nagios/perfdata.h
+nagios/skiplist.h
+nagios/sretention.h
+nagios/statusdata.h
+nagios4/README
+nagios4/bitmap.h
+nagios4/broker.h
+nagios4/cgiauth.h
+nagios4/cgiutils.h
+nagios4/comments.h
+nagios4/common.h
+nagios4/config.h
+nagios4/defaults.h
+nagios4/dkhash.h
+nagios4/downtime.h
+nagios4/fanout.h
+nagios4/iobroker.h
+nagios4/iocache.h
+nagios4/kvvec.h
+nagios4/libnagios.h
+nagios4/lnag-utils.h
+nagios4/locations.h
+nagios4/logging.h
+nagios4/macros.h
+nagios4/nagios.h
+nagios4/nebcallbacks.h
+nagios4/neberrors.h
+nagios4/nebmods.h
+nagios4/nebmodules.h
+nagios4/nebstructs.h
+nagios4/nsock.h
+nagios4/nspath.h
+nagios4/nsutils.h
+nagios4/objects.h
+nagios4/perfdata.h
+nagios4/pqueue.h
+nagios4/runcmd.h
+nagios4/shared.h
+nagios4/skiplist.h
+nagios4/snprintf.h
+nagios4/squeue.h
+nagios4/sretention.h
+nagios4/statusdata.h
+nagios4/worker.h
+src/Aggregator.h
+src/AndingFilter.h
+src/AttributelistColumn.h
+src/AttributelistFilter.h
+src/auth.h
+src/BlobColumn.h
+src/ClientQueue.h
+src/Column.h
+src/ColumnsColumn.h
+src/ContactgroupsColumn.h
+src/ContactgroupsMemberColumn.h
+src/ContactsColumn.h
+src/CountAggregator.h
+src/CustomTimeperiodColumn.h
+src/CustomVarsColumn.h
+src/CustomVarsExplicitColumn.h
+src/CustomVarsFilter.h
+src/data_encoding.h
+src/DoubleAggregator.h
+src/DoubleColumnFilter.h
+src/DoubleColumn.h
+src/DoublePointerColumn.h
+src/DownCommColumn.h
+src/DowntimeOrComment.h
+src/DynamicColumn.h
+src/EmptyColumn.h
+src/Filter.h
+src/FixedIntColumn.h
+src/GlobalCountersColumn.h
+src/global_counters.h
+src/HostContactsColumn.h
+src/HostFileColumn.h
+src/HostgroupsColumn.h
+src/HostlistColumnFilter.h
+src/HostlistColumn.h
+src/HostlistStateColumn.h
+src/HostServiceState.h
+src/HostSpecialDoubleColumn.h
+src/HostSpecialIntColumn.h
+src/InputBuffer.h
+src/IntAggregator.h
+src/IntColumnFilter.h
+src/IntColumn.h
+src/IntPointerColumn.h
+src/ListColumnFilter.h
+src/ListColumn.h
+src/livestatus.h
+src/LogCache.h
+src/LogEntry.h
+src/Logfile.h
+src/logger.h
+src/MetricsColumn.h
+src/mk_inventory.h
+src/nagios.h
+src/NegatingFilter.h
+src/NullColumn.h
+src/OffsetDoubleColumn.h
+src/OffsetIntColumn.h
+src/OffsetStringColumn.h
+src/OffsetStringHostMacroColumn.h
+src/OffsetStringMacroColumn.h
+src/OffsetStringServiceMacroColumn.h
+src/OffsetTimeColumn.h
+src/OffsetTimeperiodColumn.h
+src/opids.h
+src/OringFilter.h
+src/OutputBuffer.h
+src/PerfdataAggregator.h
+src/pnp4nagios.h
+src/Query.h
+src/ServiceContactsColumn.h
+src/ServicegroupsColumn.h
+src/ServicelistColumnFilter.h
+src/ServicelistColumn.h
+src/ServicelistStateColumn.h
+src/ServiceSpecialDoubleColumn.h
+src/ServiceSpecialIntColumn.h
+src/StatsColumn.h
+src/StatusSpecialIntColumn.h
+src/store_c.h
+src/Store.h
+src/StringColumnFilter.h
+src/StringColumn.h
+src/StringPointerColumn.h
+src/strutil.h
+src/TableColumns.h
+src/TableCommands.h
+src/TableContactgroups.h
+src/TableContacts.h
+src/TableDownComm.h
+src/Table.h
+src/TableHostgroups.h
+src/TableHosts.h
+src/TableLog.h
+src/TableServicegroups.h
+src/TableServices.h
+src/tables.h
+src/TableStateHistory.h
+src/TableStatus.h
+src/TableTimeperiods.h
+src/TimeColumnFilter.h
+src/TimeperiodsCache.h
+src/TimePointerColumn.h
+src/waittriggers.h
+src/global_counters.c
+src/logger.c
+src/module.c
+src/strutil.c
+src/unixcat.c
+src/waittriggers.c
+src/AndingFilter.cc
+src/AttributelistColumn.cc
+src/AttributelistFilter.cc
+src/auth.cc
+src/BlobColumn.cc
+src/ClientQueue.cc
+src/Column.cc
+src/ColumnsColumn.cc
+src/ContactgroupsColumn.cc
+src/ContactgroupsMemberColumn.cc
+src/ContactsColumn.cc
+src/CountAggregator.cc
+src/CustomTimeperiodColumn.cc
+src/CustomVarsColumn.cc
+src/CustomVarsExplicitColumn.cc
+src/CustomVarsFilter.cc
+src/DoubleAggregator.cc
+src/DoubleColumn.cc
+src/DoubleColumnFilter.cc
+src/DownCommColumn.cc
+src/DowntimeOrComment.cc
+src/DynamicColumn.cc
+src/EmptyColumn.cc
+src/Filter.cc
+src/GlobalCountersColumn.cc
+src/HostContactsColumn.cc
+src/HostFileColumn.cc
+src/HostgroupsColumn.cc
+src/HostlistColumn.cc
+src/HostlistColumnFilter.cc
+src/HostlistStateColumn.cc
+src/HostServiceState.cc
+src/HostSpecialDoubleColumn.cc
+src/HostSpecialIntColumn.cc
+src/InputBuffer.cc
+src/IntAggregator.cc
+src/IntColumn.cc
+src/IntColumnFilter.cc
+src/ListColumn.cc
+src/ListColumnFilter.cc
+src/LogCache.cc
+src/LogEntry.cc
+src/Logfile.cc
+src/MetricsColumn.cc
+src/mk_inventory.cc
+src/NullColumn.cc
+src/OffsetDoubleColumn.cc
+src/OffsetIntColumn.cc
+src/OffsetStringColumn.cc
+src/OffsetStringHostMacroColumn.cc
+src/OffsetStringMacroColumn.cc
+src/OffsetStringServiceMacroColumn.cc
+src/OffsetTimeColumn.cc
+src/OffsetTimeperiodColumn.cc
+src/opids.cc
+src/OringFilter.cc
+src/OutputBuffer.cc
+src/PerfdataAggregator.cc
+src/pnp4nagios.cc
+src/Query.cc
+src/ServiceContactsColumn.cc
+src/ServicegroupsColumn.cc
+src/ServicelistColumn.cc
+src/ServicelistColumnFilter.cc
+src/ServicelistStateColumn.cc
+src/ServiceSpecialDoubleColumn.cc
+src/ServiceSpecialIntColumn.cc
+src/StatsColumn.cc
+src/StatusSpecialIntColumn.cc
+src/Store.cc
+src/store_c.cc
+src/StringColumn.cc
+src/StringColumnFilter.cc
+src/strutil.cc
+src/Table.cc
+src/TableColumns.cc
+src/TableCommands.cc
+src/TableContactgroups.cc
+src/TableContacts.cc
+src/TableDownComm.cc
+src/TableHostgroups.cc
+src/TableHosts.cc
+src/TableLog.cc
+src/TableServicegroups.cc
+src/TableServices.cc
+src/TableStateHistory.cc
+src/TableStatus.cc
+src/TableTimeperiods.cc
+src/TimeColumnFilter.cc
+src/TimeperiodsCache.cc
+src/TimePointerColumn.cc
+src/Makefile.in
+src/Makefile.am
+depcomp
+install-sh
+api/python/example_multisite.py
+api/python/example.py
+api/python/livestatus.py
+api/python/make_nagvis_map.py
+api/python/README
+api/perl/Changes
+api/perl/examples/
+api/perl/examples/test.pl
+api/perl/examples/dump.pl
+api/perl/inc/
+api/perl/inc/Module/
+api/perl/inc/Module/AutoInstall.pm
+api/perl/inc/Module/Install.pm
+api/perl/inc/Module/Install/
+api/perl/inc/Module/Install/AutoInstall.pm
+api/perl/inc/Module/Install/Base.pm
+api/perl/inc/Module/Install/WriteAll.pm
+api/perl/inc/Module/Install/Win32.pm
+api/perl/inc/Module/Install/Metadata.pm
+api/perl/inc/Module/Install/Fetch.pm
+api/perl/inc/Module/Install/Makefile.pm
+api/perl/inc/Module/Install/Can.pm
+api/perl/inc/Module/Install/Include.pm
+api/perl/lib/
+api/perl/lib/Monitoring/
+api/perl/lib/Monitoring/Livestatus/
+api/perl/lib/Monitoring/Livestatus/UNIX.pm
+api/perl/lib/Monitoring/Livestatus/MULTI.pm
+api/perl/lib/Monitoring/Livestatus/INET.pm
+api/perl/lib/Monitoring/Livestatus.pm
+api/perl/Makefile.PL
+api/perl/MANIFEST
+api/perl/META.yml
+api/perl/README
+api/perl/t/
+api/perl/t/31-Monitoring-Livestatus-MULTI-live-test.t
+api/perl/t/22-Monitoring-Livestatus-UNIX.t
+api/perl/t/99-Perl-Critic.t
+api/perl/t/34-Monitoring-Livestatus-utf8_support.t
+api/perl/t/30-Monitoring-Livestatus-live-test.t
+api/perl/t/01-Monitoring-Livestatus-basic_tests.t
+api/perl/t/35-Monitoring-Livestatus-callbacks_support.t
+api/perl/t/97-Pod.t
+api/perl/t/33-Monitoring-Livestatus-test_socket_timeout.t
+api/perl/t/02-Monitoring-Livestatus-internals.t
+api/perl/t/perlcriticrc
+api/perl/t/20-Monitoring-Livestatus-test_socket.t
+api/perl/t/32-Monitoring-Livestatus-backend-test.t
+api/perl/t/03-Monitoring-Livestatus-MULTI-internals.t
+api/perl/t/98-Pod-Coverage.t
+api/perl/t/21-Monitoring-Livestatus-INET.t
+~/nagios/check_mk-1.2.7i2p3/livestatus.src ~/nagios/check_mk-1.2.7i2p3
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking for g++... g++
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables...
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking for style of include used by make... GNU
+checking dependency style of g++... gcc3
+checking for gcc... gcc
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking dependency style of gcc... gcc3
+checking for ranlib... ranlib
+checking for socket in -lsocket... no
+checking for connect in -lsocket... no
+checking for shutdown in -lsocket... no
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking arpa/inet.h usability... yes
+checking arpa/inet.h presence... yes
+checking for arpa/inet.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking netdb.h usability... yes
+checking netdb.h presence... yes
+checking for netdb.h... yes
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking for stdint.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for strings.h... (cached) yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking sys/timeb.h usability... yes
+checking sys/timeb.h presence... yes
+checking for sys/timeb.h... yes
+checking syslog.h usability... yes
+checking syslog.h presence... yes
+checking for syslog.h... yes
+checking for unistd.h... (cached) yes
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking for int32_t... yes
+checking for int64_t... yes
+checking for size_t... yes
+checking for ssize_t... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking for uint32_t... yes
+checking for uint64_t... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible realloc... yes
+checking sys/select.h usability... yes
+checking sys/select.h presence... yes
+checking for sys/select.h... yes
+checking for sys/socket.h... (cached) yes
+checking types of arguments for select... int,fd_set *,struct timeval *
+checking return type of signal handlers... void
+checking whether lstat correctly handles trailing slash... yes
+checking whether stat accepts an empty string... no
+checking for bzero... yes
+checking for gettimeofday... yes
+checking for memmove... yes
+checking for regcomp... yes
+checking for select... yes
+checking for socket... yes
+checking for strcasecmp... yes
+checking for strdup... yes
+checking for strerror... yes
+checking for strtoul... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+Making clean in src
+make[1]: Entering directory `/root/nagios/check_mk-1.2.7i2p3/livestatus.src/src'
+test -z "unixcat" || rm -f unixcat
+rm -f *~
+test -z "livestatus.so" || rm -f livestatus.so
+rm -f *.o
+make[1]: Leaving directory `/root/nagios/check_mk-1.2.7i2p3/livestatus.src/src'
+Making clean in .
+make[1]: Entering directory `/root/nagios/check_mk-1.2.7i2p3/livestatus.src'
+make[1]: Nothing to be done for `clean-am'.
+make[1]: Leaving directory `/root/nagios/check_mk-1.2.7i2p3/livestatus.src'
+make  all-recursive
+make[1]: Entering directory `/root/nagios/check_mk-1.2.7i2p3/livestatus.src'
+Making all in src
+make[2]: Entering directory `/root/nagios/check_mk-1.2.7i2p3/livestatus.src/src'
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-AndingFilter.o -MD -MP -MF .deps/livestatus_so-AndingFilter.Tpo -c -o livestatus_so-AndingFilter.o `test -f 'AndingFilter.cc' || echo './'`AndingFilter.cc
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-ClientQueue.o -MD -MP -MF .deps/livestatus_so-ClientQueue.Tpo -c -o livestatus_so-ClientQueue.o `test -f 'ClientQueue.cc' || echo './'`ClientQueue.cc
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-Column.o -MD -MP -MF .deps/livestatus_so-Column.Tpo -c -o livestatus_so-Column.o `test -f 'Column.cc' || echo './'`Column.cc
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-ColumnsColumn.o -MD -MP -MF .deps/livestatus_so-ColumnsColumn.Tpo -c -o livestatus_so-ColumnsColumn.o `test -f 'ColumnsColumn.cc' || echo './'`ColumnsColumn.cc
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-CustomVarsExplicitColumn.o -MD -MP -MF .deps/livestatus_so-CustomVarsExplicitColumn.Tpo -c -o livestatus_so-CustomVarsExplicitColumn.o `test -f 'CustomVarsExplicitColumn.cc' || echo './'`CustomVarsExplicitColumn.cc
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-ContactsColumn.o -MD -MP -MF .deps/livestatus_so-ContactsColumn.Tpo -c -o livestatus_so-ContactsColumn.o `test -f 'ContactsColumn.cc' || echo './'`ContactsColumn.cc
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-CustomVarsColumn.o -MD -MP -MF .deps/livestatus_so-CustomVarsColumn.Tpo -c -o livestatus_so-CustomVarsColumn.o `test -f 'CustomVarsColumn.cc' || echo './'`CustomVarsColumn.cc
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-CustomVarsFilter.o -MD -MP -MF .deps/livestatus_so-CustomVarsFilter.Tpo -c -o livestatus_so-CustomVarsFilter.o `test -f 'CustomVarsFilter.cc' || echo './'`CustomVarsFilter.cc
+mv -f .deps/livestatus_so-Column.Tpo .deps/livestatus_so-Column.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-DoubleColumn.o -MD -MP -MF .deps/livestatus_so-DoubleColumn.Tpo -c -o livestatus_so-DoubleColumn.o `test -f 'DoubleColumn.cc' || echo './'`DoubleColumn.cc
+mv -f .deps/livestatus_so-ClientQueue.Tpo .deps/livestatus_so-ClientQueue.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-DoubleColumnFilter.o -MD -MP -MF .deps/livestatus_so-DoubleColumnFilter.Tpo -c -o livestatus_so-DoubleColumnFilter.o `test -f 'DoubleColumnFilter.cc' || echo './'`DoubleColumnFilter.cc
+mv -f .deps/livestatus_so-CustomVarsExplicitColumn.Tpo .deps/livestatus_so-CustomVarsExplicitColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-DowntimeOrComment.o -MD -MP -MF .deps/livestatus_so-DowntimeOrComment.Tpo -c -o livestatus_so-DowntimeOrComment.o `test -f 'DowntimeOrComment.cc' || echo './'`DowntimeOrComment.cc
+mv -f .deps/livestatus_so-CustomVarsFilter.Tpo .deps/livestatus_so-CustomVarsFilter.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-DownCommColumn.o -MD -MP -MF .deps/livestatus_so-DownCommColumn.Tpo -c -o livestatus_so-DownCommColumn.o `test -f 'DownCommColumn.cc' || echo './'`DownCommColumn.cc
+mv -f .deps/livestatus_so-ColumnsColumn.Tpo .deps/livestatus_so-ColumnsColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-DynamicColumn.o -MD -MP -MF .deps/livestatus_so-DynamicColumn.Tpo -c -o livestatus_so-DynamicColumn.o `test -f 'DynamicColumn.cc' || echo './'`DynamicColumn.cc
+mv -f .deps/livestatus_so-CustomVarsColumn.Tpo .deps/livestatus_so-CustomVarsColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-EmptyColumn.o -MD -MP -MF .deps/livestatus_so-EmptyColumn.Tpo -c -o livestatus_so-EmptyColumn.o `test -f 'EmptyColumn.cc' || echo './'`EmptyColumn.cc
+mv -f .deps/livestatus_so-ContactsColumn.Tpo .deps/livestatus_so-ContactsColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-NullColumn.o -MD -MP -MF .deps/livestatus_so-NullColumn.Tpo -c -o livestatus_so-NullColumn.o `test -f 'NullColumn.cc' || echo './'`NullColumn.cc
+mv -f .deps/livestatus_so-DoubleColumnFilter.Tpo .deps/livestatus_so-DoubleColumnFilter.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-Filter.o -MD -MP -MF .deps/livestatus_so-Filter.Tpo -c -o livestatus_so-Filter.o `test -f 'Filter.cc' || echo './'`Filter.cc
+mv -f .deps/livestatus_so-DynamicColumn.Tpo .deps/livestatus_so-DynamicColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-GlobalCountersColumn.o -MD -MP -MF .deps/livestatus_so-GlobalCountersColumn.Tpo -c -o livestatus_so-GlobalCountersColumn.o `test -f 'GlobalCountersColumn.cc' || echo './'`GlobalCountersColumn.cc
+mv -f .deps/livestatus_so-AndingFilter.Tpo .deps/livestatus_so-AndingFilter.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-HostContactsColumn.o -MD -MP -MF .deps/livestatus_so-HostContactsColumn.Tpo -c -o livestatus_so-HostContactsColumn.o `test -f 'HostContactsColumn.cc' || echo './'`HostContactsColumn.cc
+mv -f .deps/livestatus_so-DowntimeOrComment.Tpo .deps/livestatus_so-DowntimeOrComment.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-HostgroupsColumn.o -MD -MP -MF .deps/livestatus_so-HostgroupsColumn.Tpo -c -o livestatus_so-HostgroupsColumn.o `test -f 'HostgroupsColumn.cc' || echo './'`HostgroupsColumn.cc
+mv -f .deps/livestatus_so-DoubleColumn.Tpo .deps/livestatus_so-DoubleColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-HostlistColumn.o -MD -MP -MF .deps/livestatus_so-HostlistColumn.Tpo -c -o livestatus_so-HostlistColumn.o `test -f 'HostlistColumn.cc' || echo './'`HostlistColumn.cc
+DownCommColumn.cc: In member function 'virtual void* DownCommColumn::getNagiosObject(char*)':
+DownCommColumn.cc:93:20: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+return (void *)id; // Hack. Convert number into pointer.
+^
+mv -f .deps/livestatus_so-Filter.Tpo .deps/livestatus_so-Filter.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-HostlistColumnFilter.o -MD -MP -MF .deps/livestatus_so-HostlistColumnFilter.Tpo -c -o livestatus_so-HostlistColumnFilter.o `test -f 'HostlistColumnFilter.cc' || echo './'`HostlistColumnFilter.cc
+mv -f .deps/livestatus_so-NullColumn.Tpo .deps/livestatus_so-NullColumn.Po
+mv -f .deps/livestatus_so-EmptyColumn.Tpo .deps/livestatus_so-EmptyColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-HostlistStateColumn.o -MD -MP -MF .deps/livestatus_so-HostlistStateColumn.Tpo -c -o livestatus_so-HostlistStateColumn.o `test -f 'HostlistStateColumn.cc' || echo './'`HostlistStateColumn.cc
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-MetricsColumn.o -MD -MP -MF .deps/livestatus_so-MetricsColumn.Tpo -c -o livestatus_so-MetricsColumn.o `test -f 'MetricsColumn.cc' || echo './'`MetricsColumn.cc
+mv -f .deps/livestatus_so-HostContactsColumn.Tpo .deps/livestatus_so-HostContactsColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-HostSpecialIntColumn.o -MD -MP -MF .deps/livestatus_so-HostSpecialIntColumn.Tpo -c -o livestatus_so-HostSpecialIntColumn.o `test -f 'HostSpecialIntColumn.cc' || echo './'`HostSpecialIntColumn.cc
+mv -f .deps/livestatus_so-DownCommColumn.Tpo .deps/livestatus_so-DownCommColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-ServiceSpecialIntColumn.o -MD -MP -MF .deps/livestatus_so-ServiceSpecialIntColumn.Tpo -c -o livestatus_so-ServiceSpecialIntColumn.o `test -f 'ServiceSpecialIntColumn.cc' || echo './'`ServiceSpecialIntColumn.cc
+mv -f .deps/livestatus_so-GlobalCountersColumn.Tpo .deps/livestatus_so-GlobalCountersColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-InputBuffer.o -MD -MP -MF .deps/livestatus_so-InputBuffer.Tpo -c -o livestatus_so-InputBuffer.o `test -f 'InputBuffer.cc' || echo './'`InputBuffer.cc
+mv -f .deps/livestatus_so-HostlistColumnFilter.Tpo .deps/livestatus_so-HostlistColumnFilter.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-IntColumn.o -MD -MP -MF .deps/livestatus_so-IntColumn.Tpo -c -o livestatus_so-IntColumn.o `test -f 'IntColumn.cc' || echo './'`IntColumn.cc
+mv -f .deps/livestatus_so-HostgroupsColumn.Tpo .deps/livestatus_so-HostgroupsColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-IntColumnFilter.o -MD -MP -MF .deps/livestatus_so-IntColumnFilter.Tpo -c -o livestatus_so-IntColumnFilter.o `test -f 'IntColumnFilter.cc' || echo './'`IntColumnFilter.cc
+mv -f .deps/livestatus_so-HostSpecialIntColumn.Tpo .deps/livestatus_so-HostSpecialIntColumn.Po
+mv -f .deps/livestatus_so-ServiceSpecialIntColumn.Tpo .deps/livestatus_so-ServiceSpecialIntColumn.Po
+mv -f .deps/livestatus_so-HostlistColumn.Tpo .deps/livestatus_so-HostlistColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-ListColumn.o -MD -MP -MF .deps/livestatus_so-ListColumn.Tpo -c -o livestatus_so-ListColumn.o `test -f 'ListColumn.cc' || echo './'`ListColumn.cc
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-ListColumnFilter.o -MD -MP -MF .deps/livestatus_so-ListColumnFilter.Tpo -c -o livestatus_so-ListColumnFilter.o `test -f 'ListColumnFilter.cc' || echo './'`ListColumnFilter.cc
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-OffsetDoubleColumn.o -MD -MP -MF .deps/livestatus_so-OffsetDoubleColumn.Tpo -c -o livestatus_so-OffsetDoubleColumn.o `test -f 'OffsetDoubleColumn.cc' || echo './'`OffsetDoubleColumn.cc
+mv -f .deps/livestatus_so-MetricsColumn.Tpo .deps/livestatus_so-MetricsColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-OffsetIntColumn.o -MD -MP -MF .deps/livestatus_so-OffsetIntColumn.Tpo -c -o livestatus_so-OffsetIntColumn.o `test -f 'OffsetIntColumn.cc' || echo './'`OffsetIntColumn.cc
+mv -f .deps/livestatus_so-HostlistStateColumn.Tpo .deps/livestatus_so-HostlistStateColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-OffsetStringColumn.o -MD -MP -MF .deps/livestatus_so-OffsetStringColumn.Tpo -c -o livestatus_so-OffsetStringColumn.o `test -f 'OffsetStringColumn.cc' || echo './'`OffsetStringColumn.cc
+mv -f .deps/livestatus_so-IntColumnFilter.Tpo .deps/livestatus_so-IntColumnFilter.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-OffsetTimeperiodColumn.o -MD -MP -MF .deps/livestatus_so-OffsetTimeperiodColumn.Tpo -c -o livestatus_so-OffsetTimeperiodColumn.o `test -f 'OffsetTimeperiodColumn.cc' || echo './'`OffsetTimeperiodColumn.cc
+mv -f .deps/livestatus_so-InputBuffer.Tpo .deps/livestatus_so-InputBuffer.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-OringFilter.o -MD -MP -MF .deps/livestatus_so-OringFilter.Tpo -c -o livestatus_so-OringFilter.o `test -f 'OringFilter.cc' || echo './'`OringFilter.cc
+mv -f .deps/livestatus_so-IntColumn.Tpo .deps/livestatus_so-IntColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-OutputBuffer.o -MD -MP -MF .deps/livestatus_so-OutputBuffer.Tpo -c -o livestatus_so-OutputBuffer.o `test -f 'OutputBuffer.cc' || echo './'`OutputBuffer.cc
+mv -f .deps/livestatus_so-ListColumn.Tpo .deps/livestatus_so-ListColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-OffsetTimeColumn.o -MD -MP -MF .deps/livestatus_so-OffsetTimeColumn.Tpo -c -o livestatus_so-OffsetTimeColumn.o `test -f 'OffsetTimeColumn.cc' || echo './'`OffsetTimeColumn.cc
+mv -f .deps/livestatus_so-ListColumnFilter.Tpo .deps/livestatus_so-ListColumnFilter.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-TimePointerColumn.o -MD -MP -MF .deps/livestatus_so-TimePointerColumn.Tpo -c -o livestatus_so-TimePointerColumn.o `test -f 'TimePointerColumn.cc' || echo './'`TimePointerColumn.cc
+mv -f .deps/livestatus_so-OffsetDoubleColumn.Tpo .deps/livestatus_so-OffsetDoubleColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-TimeColumnFilter.o -MD -MP -MF .deps/livestatus_so-TimeColumnFilter.Tpo -c -o livestatus_so-TimeColumnFilter.o `test -f 'TimeColumnFilter.cc' || echo './'`TimeColumnFilter.cc
+mv -f .deps/livestatus_so-OffsetStringColumn.Tpo .deps/livestatus_so-OffsetStringColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-PerfdataAggregator.o -MD -MP -MF .deps/livestatus_so-PerfdataAggregator.Tpo -c -o livestatus_so-PerfdataAggregator.o `test -f 'PerfdataAggregator.cc' || echo './'`PerfdataAggregator.cc
+mv -f .deps/livestatus_so-OringFilter.Tpo .deps/livestatus_so-OringFilter.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-Query.o -MD -MP -MF .deps/livestatus_so-Query.Tpo -c -o livestatus_so-Query.o `test -f 'Query.cc' || echo './'`Query.cc
+mv -f .deps/livestatus_so-OffsetIntColumn.Tpo .deps/livestatus_so-OffsetIntColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-ServiceContactsColumn.o -MD -MP -MF .deps/livestatus_so-ServiceContactsColumn.Tpo -c -o livestatus_so-ServiceContactsColumn.o `test -f 'ServiceContactsColumn.cc' || echo './'`ServiceContactsColumn.cc
+mv -f .deps/livestatus_so-OffsetTimeperiodColumn.Tpo .deps/livestatus_so-OffsetTimeperiodColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-ServicegroupsColumn.o -MD -MP -MF .deps/livestatus_so-ServicegroupsColumn.Tpo -c -o livestatus_so-ServicegroupsColumn.o `test -f 'ServicegroupsColumn.cc' || echo './'`ServicegroupsColumn.cc
+mv -f .deps/livestatus_so-OffsetTimeColumn.Tpo .deps/livestatus_so-OffsetTimeColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-ServicelistColumn.o -MD -MP -MF .deps/livestatus_so-ServicelistColumn.Tpo -c -o livestatus_so-ServicelistColumn.o `test -f 'ServicelistColumn.cc' || echo './'`ServicelistColumn.cc
+mv -f .deps/livestatus_so-OutputBuffer.Tpo .deps/livestatus_so-OutputBuffer.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-ServicelistColumnFilter.o -MD -MP -MF .deps/livestatus_so-ServicelistColumnFilter.Tpo -c -o livestatus_so-ServicelistColumnFilter.o `test -f 'ServicelistColumnFilter.cc' || echo './'`ServicelistColumnFilter.cc
+mv -f .deps/livestatus_so-ServiceContactsColumn.Tpo .deps/livestatus_so-ServiceContactsColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-ServicelistStateColumn.o -MD -MP -MF .deps/livestatus_so-ServicelistStateColumn.Tpo -c -o livestatus_so-ServicelistStateColumn.o `test -f 'ServicelistStateColumn.cc' || echo './'`ServicelistStateColumn.cc
+mv -f .deps/livestatus_so-TimeColumnFilter.Tpo .deps/livestatus_so-TimeColumnFilter.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-store_c.o -MD -MP -MF .deps/livestatus_so-store_c.Tpo -c -o livestatus_so-store_c.o `test -f 'store_c.cc' || echo './'`store_c.cc
+mv -f .deps/livestatus_so-TimePointerColumn.Tpo .deps/livestatus_so-TimePointerColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-Store.o -MD -MP -MF .deps/livestatus_so-Store.Tpo -c -o livestatus_so-Store.o `test -f 'Store.cc' || echo './'`Store.cc
+mv -f .deps/livestatus_so-PerfdataAggregator.Tpo .deps/livestatus_so-PerfdataAggregator.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-StringColumn.o -MD -MP -MF .deps/livestatus_so-StringColumn.Tpo -c -o livestatus_so-StringColumn.o `test -f 'StringColumn.cc' || echo './'`StringColumn.cc
+mv -f .deps/livestatus_so-ServicelistColumnFilter.Tpo .deps/livestatus_so-ServicelistColumnFilter.Po
+mv -f .deps/livestatus_so-ServicegroupsColumn.Tpo .deps/livestatus_so-ServicegroupsColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-StringColumnFilter.o -MD -MP -MF .deps/livestatus_so-StringColumnFilter.Tpo -c -o livestatus_so-StringColumnFilter.o `test -f 'StringColumnFilter.cc' || echo './'`StringColumnFilter.cc
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-strutil.o -MD -MP -MF .deps/livestatus_so-strutil.Tpo -c -o livestatus_so-strutil.o `test -f 'strutil.cc' || echo './'`strutil.cc
+mv -f .deps/livestatus_so-strutil.Tpo .deps/livestatus_so-strutil.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-Table.o -MD -MP -MF .deps/livestatus_so-Table.Tpo -c -o livestatus_so-Table.o `test -f 'Table.cc' || echo './'`Table.cc
+mv -f .deps/livestatus_so-ServicelistColumn.Tpo .deps/livestatus_so-ServicelistColumn.Po
+mv -f .deps/livestatus_so-ServicelistStateColumn.Tpo .deps/livestatus_so-ServicelistStateColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-TableColumns.o -MD -MP -MF .deps/livestatus_so-TableColumns.Tpo -c -o livestatus_so-TableColumns.o `test -f 'TableColumns.cc' || echo './'`TableColumns.cc
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-StatusSpecialIntColumn.o -MD -MP -MF .deps/livestatus_so-StatusSpecialIntColumn.Tpo -c -o livestatus_so-StatusSpecialIntColumn.o `test -f 'StatusSpecialIntColumn.cc' || echo './'`StatusSpecialIntColumn.cc
+mv -f .deps/livestatus_so-store_c.Tpo .deps/livestatus_so-store_c.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-HostSpecialDoubleColumn.o -MD -MP -MF .deps/livestatus_so-HostSpecialDoubleColumn.Tpo -c -o livestatus_so-HostSpecialDoubleColumn.o `test -f 'HostSpecialDoubleColumn.cc' || echo './'`HostSpecialDoubleColumn.cc
+mv -f .deps/livestatus_so-StringColumn.Tpo .deps/livestatus_so-StringColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-TableCommands.o -MD -MP -MF .deps/livestatus_so-TableCommands.Tpo -c -o livestatus_so-TableCommands.o `test -f 'TableCommands.cc' || echo './'`TableCommands.cc
+mv -f .deps/livestatus_so-StringColumnFilter.Tpo .deps/livestatus_so-StringColumnFilter.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-TableContacts.o -MD -MP -MF .deps/livestatus_so-TableContacts.Tpo -c -o livestatus_so-TableContacts.o `test -f 'TableContacts.cc' || echo './'`TableContacts.cc
+mv -f .deps/livestatus_so-StatusSpecialIntColumn.Tpo .deps/livestatus_so-StatusSpecialIntColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-TableDownComm.o -MD -MP -MF .deps/livestatus_so-TableDownComm.Tpo -c -o livestatus_so-TableDownComm.o `test -f 'TableDownComm.cc' || echo './'`TableDownComm.cc
+mv -f .deps/livestatus_so-HostSpecialDoubleColumn.Tpo .deps/livestatus_so-HostSpecialDoubleColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-TableHostgroups.o -MD -MP -MF .deps/livestatus_so-TableHostgroups.Tpo -c -o livestatus_so-TableHostgroups.o `test -f 'TableHostgroups.cc' || echo './'`TableHostgroups.cc
+mv -f .deps/livestatus_so-Store.Tpo .deps/livestatus_so-Store.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-ServiceSpecialDoubleColumn.o -MD -MP -MF .deps/livestatus_so-ServiceSpecialDoubleColumn.Tpo -c -o livestatus_so-ServiceSpecialDoubleColumn.o `test -f 'ServiceSpecialDoubleColumn.cc' || echo './'`ServiceSpecialDoubleColumn.cc
+mv -f .deps/livestatus_so-Table.Tpo .deps/livestatus_so-Table.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-TableHosts.o -MD -MP -MF .deps/livestatus_so-TableHosts.Tpo -c -o livestatus_so-TableHosts.o `test -f 'TableHosts.cc' || echo './'`TableHosts.cc
+mv -f .deps/livestatus_so-TableCommands.Tpo .deps/livestatus_so-TableCommands.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-TableServicegroups.o -MD -MP -MF .deps/livestatus_so-TableServicegroups.Tpo -c -o livestatus_so-TableServicegroups.o `test -f 'TableServicegroups.cc' || echo './'`TableServicegroups.cc
+mv -f .deps/livestatus_so-TableColumns.Tpo .deps/livestatus_so-TableColumns.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-TableServices.o -MD -MP -MF .deps/livestatus_so-TableServices.Tpo -c -o livestatus_so-TableServices.o `test -f 'TableServices.cc' || echo './'`TableServices.cc
+mv -f .deps/livestatus_so-ServiceSpecialDoubleColumn.Tpo .deps/livestatus_so-ServiceSpecialDoubleColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-TableStatus.o -MD -MP -MF .deps/livestatus_so-TableStatus.Tpo -c -o livestatus_so-TableStatus.o `test -f 'TableStatus.cc' || echo './'`TableStatus.cc
+mv -f .deps/livestatus_so-Query.Tpo .deps/livestatus_so-Query.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-LogEntry.o -MD -MP -MF .deps/livestatus_so-LogEntry.Tpo -c -o livestatus_so-LogEntry.o `test -f 'LogEntry.cc' || echo './'`LogEntry.cc
+mv -f .deps/livestatus_so-LogEntry.Tpo .deps/livestatus_so-LogEntry.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-LogCache.o -MD -MP -MF .deps/livestatus_so-LogCache.Tpo -c -o livestatus_so-LogCache.o `test -f 'LogCache.cc' || echo './'`LogCache.cc
+mv -f .deps/livestatus_so-TableHostgroups.Tpo .deps/livestatus_so-TableHostgroups.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-Logfile.o -MD -MP -MF .deps/livestatus_so-Logfile.Tpo -c -o livestatus_so-Logfile.o `test -f 'Logfile.cc' || echo './'`Logfile.cc
+mv -f .deps/livestatus_so-LogCache.Tpo .deps/livestatus_so-LogCache.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-TableStateHistory.o -MD -MP -MF .deps/livestatus_so-TableStateHistory.Tpo -c -o livestatus_so-TableStateHistory.o `test -f 'TableStateHistory.cc' || echo './'`TableStateHistory.cc
+mv -f .deps/livestatus_so-TableContacts.Tpo .deps/livestatus_so-TableContacts.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-TableLog.o -MD -MP -MF .deps/livestatus_so-TableLog.Tpo -c -o livestatus_so-TableLog.o `test -f 'TableLog.cc' || echo './'`TableLog.cc
+mv -f .deps/livestatus_so-TableDownComm.Tpo .deps/livestatus_so-TableDownComm.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-TableTimeperiods.o -MD -MP -MF .deps/livestatus_so-TableTimeperiods.Tpo -c -o livestatus_so-TableTimeperiods.o `test -f 'TableTimeperiods.cc' || echo './'`TableTimeperiods.cc
+mv -f .deps/livestatus_so-TableServicegroups.Tpo .deps/livestatus_so-TableServicegroups.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-TableContactgroups.o -MD -MP -MF .deps/livestatus_so-TableContactgroups.Tpo -c -o livestatus_so-TableContactgroups.o `test -f 'TableContactgroups.cc' || echo './'`TableContactgroups.cc
+mv -f .deps/livestatus_so-Logfile.Tpo .deps/livestatus_so-Logfile.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-ContactgroupsMemberColumn.o -MD -MP -MF .deps/livestatus_so-ContactgroupsMemberColumn.Tpo -c -o livestatus_so-ContactgroupsMemberColumn.o `test -f 'ContactgroupsMemberColumn.cc' || echo './'`ContactgroupsMemberColumn.cc
+mv -f .deps/livestatus_so-ContactgroupsMemberColumn.Tpo .deps/livestatus_so-ContactgroupsMemberColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-OffsetStringMacroColumn.o -MD -MP -MF .deps/livestatus_so-OffsetStringMacroColumn.Tpo -c -o livestatus_so-OffsetStringMacroColumn.o `test -f 'OffsetStringMacroColumn.cc' || echo './'`OffsetStringMacroColumn.cc
+mv -f .deps/livestatus_so-TableTimeperiods.Tpo .deps/livestatus_so-TableTimeperiods.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-OffsetStringServiceMacroColumn.o -MD -MP -MF .deps/livestatus_so-OffsetStringServiceMacroColumn.Tpo -c -o livestatus_so-OffsetStringServiceMacroColumn.o `test -f 'OffsetStringServiceMacroColumn.cc' || echo './'`OffsetStringServiceMacroColumn.cc
+mv -f .deps/livestatus_so-TableContactgroups.Tpo .deps/livestatus_so-TableContactgroups.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-OffsetStringHostMacroColumn.o -MD -MP -MF .deps/livestatus_so-OffsetStringHostMacroColumn.Tpo -c -o livestatus_so-OffsetStringHostMacroColumn.o `test -f 'OffsetStringHostMacroColumn.cc' || echo './'`OffsetStringHostMacroColumn.cc
+mv -f .deps/livestatus_so-OffsetStringServiceMacroColumn.Tpo .deps/livestatus_so-OffsetStringServiceMacroColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-StatsColumn.o -MD -MP -MF .deps/livestatus_so-StatsColumn.Tpo -c -o livestatus_so-StatsColumn.o `test -f 'StatsColumn.cc' || echo './'`StatsColumn.cc
+mv -f .deps/livestatus_so-OffsetStringMacroColumn.Tpo .deps/livestatus_so-OffsetStringMacroColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-IntAggregator.o -MD -MP -MF .deps/livestatus_so-IntAggregator.Tpo -c -o livestatus_so-IntAggregator.o `test -f 'IntAggregator.cc' || echo './'`IntAggregator.cc
+mv -f .deps/livestatus_so-StatsColumn.Tpo .deps/livestatus_so-StatsColumn.Po
+mv -f .deps/livestatus_so-OffsetStringHostMacroColumn.Tpo .deps/livestatus_so-OffsetStringHostMacroColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-CountAggregator.o -MD -MP -MF .deps/livestatus_so-CountAggregator.Tpo -c -o livestatus_so-CountAggregator.o `test -f 'CountAggregator.cc' || echo './'`CountAggregator.cc
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-DoubleAggregator.o -MD -MP -MF .deps/livestatus_so-DoubleAggregator.Tpo -c -o livestatus_so-DoubleAggregator.o `test -f 'DoubleAggregator.cc' || echo './'`DoubleAggregator.cc
+mv -f .deps/livestatus_so-CountAggregator.Tpo .deps/livestatus_so-CountAggregator.Po
+mv -f .deps/livestatus_so-IntAggregator.Tpo .deps/livestatus_so-IntAggregator.Po
+mv -f .deps/livestatus_so-DoubleAggregator.Tpo .deps/livestatus_so-DoubleAggregator.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-AttributelistColumn.o -MD -MP -MF .deps/livestatus_so-AttributelistColumn.Tpo -c -o livestatus_so-AttributelistColumn.o `test -f 'AttributelistColumn.cc' || echo './'`AttributelistColumn.cc
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-AttributelistFilter.o -MD -MP -MF .deps/livestatus_so-AttributelistFilter.Tpo -c -o livestatus_so-AttributelistFilter.o `test -f 'AttributelistFilter.cc' || echo './'`AttributelistFilter.cc
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-BlobColumn.o -MD -MP -MF .deps/livestatus_so-BlobColumn.Tpo -c -o livestatus_so-BlobColumn.o `test -f 'BlobColumn.cc' || echo './'`BlobColumn.cc
+mv -f .deps/livestatus_so-AttributelistFilter.Tpo .deps/livestatus_so-AttributelistFilter.Po
+mv -f .deps/livestatus_so-BlobColumn.Tpo .deps/livestatus_so-BlobColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-HostFileColumn.o -MD -MP -MF .deps/livestatus_so-HostFileColumn.Tpo -c -o livestatus_so-HostFileColumn.o `test -f 'HostFileColumn.cc' || echo './'`HostFileColumn.cc
+gcc -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-global_counters.o -MD -MP -MF .deps/livestatus_so-global_counters.Tpo -c -o livestatus_so-global_counters.o `test -f 'global_counters.c' || echo './'`global_counters.c
+mv -f .deps/livestatus_so-AttributelistColumn.Tpo .deps/livestatus_so-AttributelistColumn.Po
+gcc -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-module.o -MD -MP -MF .deps/livestatus_so-module.Tpo -c -o livestatus_so-module.o `test -f 'module.c' || echo './'`module.c
+mv -f .deps/livestatus_so-global_counters.Tpo .deps/livestatus_so-global_counters.Po
+gcc -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-logger.o -MD -MP -MF .deps/livestatus_so-logger.Tpo -c -o livestatus_so-logger.o `test -f 'logger.c' || echo './'`logger.c
+mv -f .deps/livestatus_so-logger.Tpo .deps/livestatus_so-logger.Po
+gcc -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-waittriggers.o -MD -MP -MF .deps/livestatus_so-waittriggers.Tpo -c -o livestatus_so-waittriggers.o `test -f 'waittriggers.c' || echo './'`waittriggers.c
+mv -f .deps/livestatus_so-waittriggers.Tpo .deps/livestatus_so-waittriggers.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-TimeperiodsCache.o -MD -MP -MF .deps/livestatus_so-TimeperiodsCache.Tpo -c -o livestatus_so-TimeperiodsCache.o `test -f 'TimeperiodsCache.cc' || echo './'`TimeperiodsCache.cc
+mv -f .deps/livestatus_so-HostFileColumn.Tpo .deps/livestatus_so-HostFileColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-pnp4nagios.o -MD -MP -MF .deps/livestatus_so-pnp4nagios.Tpo -c -o livestatus_so-pnp4nagios.o `test -f 'pnp4nagios.cc' || echo './'`pnp4nagios.cc
+mv -f .deps/livestatus_so-pnp4nagios.Tpo .deps/livestatus_so-pnp4nagios.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-mk_inventory.o -MD -MP -MF .deps/livestatus_so-mk_inventory.Tpo -c -o livestatus_so-mk_inventory.o `test -f 'mk_inventory.cc' || echo './'`mk_inventory.cc
+mv -f .deps/livestatus_so-module.Tpo .deps/livestatus_so-module.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-ContactgroupsColumn.o -MD -MP -MF .deps/livestatus_so-ContactgroupsColumn.Tpo -c -o livestatus_so-ContactgroupsColumn.o `test -f 'ContactgroupsColumn.cc' || echo './'`ContactgroupsColumn.cc
+mv -f .deps/livestatus_so-TimeperiodsCache.Tpo .deps/livestatus_so-TimeperiodsCache.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-CustomTimeperiodColumn.o -MD -MP -MF .deps/livestatus_so-CustomTimeperiodColumn.Tpo -c -o livestatus_so-CustomTimeperiodColumn.o `test -f 'CustomTimeperiodColumn.cc' || echo './'`CustomTimeperiodColumn.cc
+mv -f .deps/livestatus_so-mk_inventory.Tpo .deps/livestatus_so-mk_inventory.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-HostServiceState.o -MD -MP -MF .deps/livestatus_so-HostServiceState.Tpo -c -o livestatus_so-HostServiceState.o `test -f 'HostServiceState.cc' || echo './'`HostServiceState.cc
+mv -f .deps/livestatus_so-HostServiceState.Tpo .deps/livestatus_so-HostServiceState.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-opids.o -MD -MP -MF .deps/livestatus_so-opids.Tpo -c -o livestatus_so-opids.o `test -f 'opids.cc' || echo './'`opids.cc
+mv -f .deps/livestatus_so-CustomTimeperiodColumn.Tpo .deps/livestatus_so-CustomTimeperiodColumn.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4 -I../nagios4 -fPIC -g -O2 -MT livestatus_so-auth.o -MD -MP -MF .deps/livestatus_so-auth.Tpo -c -o livestatus_so-auth.o `test -f 'auth.cc' || echo './'`auth.cc
+mv -f .deps/livestatus_so-opids.Tpo .deps/livestatus_so-opids.Po
+gcc -DHAVE_CONFIG_H -I. -I..   -g -O2 -DNAGIOS4  -g -O2 -MT unixcat.o -MD -MP -MF .deps/unixcat.Tpo -c -o unixcat.o unixcat.c
+mv -f .deps/livestatus_so-ContactgroupsColumn.Tpo .deps/livestatus_so-ContactgroupsColumn.Po
+mv -f .deps/livestatus_so-TableLog.Tpo .deps/livestatus_so-TableLog.Po
+mv -f .deps/unixcat.Tpo .deps/unixcat.Po
+gcc  -g -O2   -o unixcat unixcat.o -lpthread
+mv -f .deps/livestatus_so-auth.Tpo .deps/livestatus_so-auth.Po
+mv -f .deps/livestatus_so-TableStatus.Tpo .deps/livestatus_so-TableStatus.Po
+mv -f .deps/livestatus_so-TableStateHistory.Tpo .deps/livestatus_so-TableStateHistory.Po
+mv -f .deps/livestatus_so-TableServices.Tpo .deps/livestatus_so-TableServices.Po
+mv -f .deps/livestatus_so-TableHosts.Tpo .deps/livestatus_so-TableHosts.Po
+rm -f livestatus.so
+rm -f plugin.so
+ar cru livestatus.so livestatus_so-AndingFilter.o livestatus_so-ClientQueue.o livestatus_so-Column.o livestatus_so-ColumnsColumn.o livestatus_so-CustomVarsExplicitColumn.o livestatus_so-ContactsColumn.o livestatus_so-CustomVarsColumn.o livestatus_so-CustomVarsFilter.o livestatus_so-DoubleColumn.o livestatus_so-DoubleColumnFilter.o livestatus_so-DowntimeOrComment.o livestatus_so-DownCommColumn.o livestatus_so-DynamicColumn.o livestatus_so-EmptyColumn.o livestatus_so-NullColumn.o livestatus_so-Filter.o livestatus_so-GlobalCountersColumn.o livestatus_so-HostContactsColumn.o livestatus_so-HostgroupsColumn.o livestatus_so-HostlistColumn.o livestatus_so-HostlistColumnFilter.o livestatus_so-HostlistStateColumn.o livestatus_so-MetricsColumn.o livestatus_so-HostSpecialIntColumn.o livestatus_so-ServiceSpecialIntColumn.o livestatus_so-InputBuffer.o livestatus_so-IntColumn.o livestatus_so-IntColumnFilter.o livestatus_so-ListColumn.o livestatus_so-ListColumnFilter.o livestatus_so-OffsetDoubleColumn.o livestatus_so-OffsetIntColumn.o livestatus_so-OffsetStringColumn.o livestatus_so-OffsetTimeperiodColumn.o livestatus_so-OringFilter.o livestatus_so-OutputBuffer.o livestatus_so-OffsetTimeColumn.o livestatus_so-TimePointerColumn.o livestatus_so-TimeColumnFilter.o livestatus_so-PerfdataAggregator.o livestatus_so-Query.o livestatus_so-ServiceContactsColumn.o livestatus_so-ServicegroupsColumn.o livestatus_so-ServicelistColumn.o livestatus_so-ServicelistColumnFilter.o livestatus_so-ServicelistStateColumn.o livestatus_so-store_c.o livestatus_so-Store.o livestatus_so-StringColumn.o livestatus_so-StringColumnFilter.o livestatus_so-strutil.o livestatus_so-Table.o livestatus_so-TableColumns.o livestatus_so-StatusSpecialIntColumn.o livestatus_so-HostSpecialDoubleColumn.o livestatus_so-TableCommands.o livestatus_so-TableContacts.o livestatus_so-TableDownComm.o livestatus_so-TableHostgroups.o livestatus_so-ServiceSpecialDoubleColumn.o livestatus_so-TableHosts.o livestatus_so-TableServicegroups.o livestatus_so-TableServices.o livestatus_so-TableStatus.o livestatus_so-LogEntry.o livestatus_so-LogCache.o livestatus_so-Logfile.o livestatus_so-TableStateHistory.o livestatus_so-TableLog.o livestatus_so-TableTimeperiods.o livestatus_so-TableContactgroups.o livestatus_so-ContactgroupsMemberColumn.o livestatus_so-OffsetStringMacroColumn.o livestatus_so-OffsetStringServiceMacroColumn.o livestatus_so-OffsetStringHostMacroColumn.o livestatus_so-StatsColumn.o livestatus_so-IntAggregator.o livestatus_so-CountAggregator.o livestatus_so-DoubleAggregator.o livestatus_so-AttributelistColumn.o livestatus_so-AttributelistFilter.o livestatus_so-BlobColumn.o livestatus_so-HostFileColumn.o livestatus_so-global_counters.o livestatus_so-module.o livestatus_so-logger.o livestatus_so-waittriggers.o livestatus_so-TimeperiodsCache.o livestatus_so-pnp4nagios.o livestatus_so-mk_inventory.o livestatus_so-ContactgroupsColumn.o livestatus_so-CustomTimeperiodColumn.o livestatus_so-HostServiceState.o livestatus_so-opids.o livestatus_so-auth.o
+g++  -s -fPIC -shared livestatus_so-AndingFilter.o livestatus_so-ClientQueue.o livestatus_so-Column.o livestatus_so-ColumnsColumn.o livestatus_so-CustomVarsExplicitColumn.o livestatus_so-ContactsColumn.o livestatus_so-CustomVarsColumn.o livestatus_so-CustomVarsFilter.o livestatus_so-DoubleColumn.o livestatus_so-DoubleColumnFilter.o livestatus_so-DowntimeOrComment.o livestatus_so-DownCommColumn.o livestatus_so-DynamicColumn.o livestatus_so-EmptyColumn.o livestatus_so-NullColumn.o livestatus_so-Filter.o livestatus_so-GlobalCountersColumn.o livestatus_so-HostContactsColumn.o livestatus_so-HostgroupsColumn.o livestatus_so-HostlistColumn.o livestatus_so-HostlistColumnFilter.o livestatus_so-HostlistStateColumn.o livestatus_so-MetricsColumn.o livestatus_so-HostSpecialIntColumn.o livestatus_so-ServiceSpecialIntColumn.o livestatus_so-InputBuffer.o livestatus_so-IntColumn.o livestatus_so-IntColumnFilter.o livestatus_so-ListColumn.o livestatus_so-ListColumnFilter.o livestatus_so-OffsetDoubleColumn.o livestatus_so-OffsetIntColumn.o livestatus_so-OffsetStringColumn.o livestatus_so-OffsetTimeperiodColumn.o livestatus_so-OringFilter.o livestatus_so-OutputBuffer.o livestatus_so-OffsetTimeColumn.o livestatus_so-TimePointerColumn.o livestatus_so-TimeColumnFilter.o livestatus_so-PerfdataAggregator.o livestatus_so-Query.o livestatus_so-ServiceContactsColumn.o livestatus_so-ServicegroupsColumn.o livestatus_so-ServicelistColumn.o livestatus_so-ServicelistColumnFilter.o livestatus_so-ServicelistStateColumn.o livestatus_so-store_c.o livestatus_so-Store.o livestatus_so-StringColumn.o livestatus_so-StringColumnFilter.o livestatus_so-strutil.o livestatus_so-Table.o livestatus_so-TableColumns.o livestatus_so-StatusSpecialIntColumn.o livestatus_so-HostSpecialDoubleColumn.o livestatus_so-TableCommands.o livestatus_so-TableContacts.o livestatus_so-TableDownComm.o livestatus_so-TableHostgroups.o livestatus_so-ServiceSpecialDoubleColumn.o livestatus_so-TableHosts.o livestatus_so-TableServicegroups.o livestatus_so-TableServices.o livestatus_so-TableStatus.o livestatus_so-LogEntry.o livestatus_so-LogCache.o livestatus_so-Logfile.o livestatus_so-TableStateHistory.o livestatus_so-TableLog.o livestatus_so-TableTimeperiods.o livestatus_so-TableContactgroups.o livestatus_so-ContactgroupsMemberColumn.o livestatus_so-OffsetStringMacroColumn.o livestatus_so-OffsetStringServiceMacroColumn.o livestatus_so-OffsetStringHostMacroColumn.o livestatus_so-StatsColumn.o livestatus_so-IntAggregator.o livestatus_so-CountAggregator.o livestatus_so-DoubleAggregator.o livestatus_so-AttributelistColumn.o livestatus_so-AttributelistFilter.o livestatus_so-BlobColumn.o livestatus_so-HostFileColumn.o livestatus_so-global_counters.o livestatus_so-module.o livestatus_so-logger.o livestatus_so-waittriggers.o livestatus_so-TimeperiodsCache.o livestatus_so-pnp4nagios.o livestatus_so-mk_inventory.o livestatus_so-ContactgroupsColumn.o livestatus_so-CustomTimeperiodColumn.o livestatus_so-HostServiceState.o livestatus_so-opids.o livestatus_so-auth.o -o livestatus.o -lpthread -lstdc++
+ranlib livestatus.so
+make[2]: Leaving directory `/root/nagios/check_mk-1.2.7i2p3/livestatus.src/src'
+make[2]: Entering directory `/root/nagios/check_mk-1.2.7i2p3/livestatus.src'
+make[2]: Nothing to be done for `all-am'.
+make[2]: Leaving directory `/root/nagios/check_mk-1.2.7i2p3/livestatus.src'
+make[1]: Leaving directory `/root/nagios/check_mk-1.2.7i2p3/livestatus.src'
+~/nagios/check_mk-1.2.7i2p3
