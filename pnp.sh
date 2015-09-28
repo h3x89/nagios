@@ -57,16 +57,6 @@ echo '#pnp4nagios configuration end' >> /usr/local/nagios/etc/nagios.cfg
 
 cat << EOF >> /usr/local/nagios/etc/objects/commands.cfg
 
-define command{
-       command_name    process-service-perfdata-file
-       command_line    /usr/local/pnp4nagios/libexec/process_perfdata.pl --bulk=/usr/local/pnp4nagios/var/service-perfdata
-}
- 
-define command{
-       command_name    process-host-perfdata-file
-       command_line    /usr/local/pnp4nagios/libexec/process_perfdata.pl --bulk=/usr/local/pnp4nagios/var/host-perfdata
-}
-
 # Bulk with NPCD mode
 
 #
@@ -89,6 +79,30 @@ command_line /bin/mv /usr/local/pnp4nagios/var/host-perfdata /usr/local/pnp4nagi
 
 EOF
 
+
+
+cat << EOF >> /usr/local/nagios/etc/objects/templates.cfg
+define host {
+
+name host-pnp
+
+action_url /pnp4nagios/index.php/graph?host=$HOSTNAME$&srv=_HOST_’ class=’tips’ rel=’/pnp4nagios/index.php/popup?host=$HOSTNAME$&srv=_HOST_
+
+register 0
+
+}
+
+define service {
+
+name srv-pnp
+
+action_url /pnp4nagios/index.php/graph?host=$HOSTNAME$&srv=$SERVICEDESC$’ class=’tips’ rel=’/pnp4nagios/index.php/popup?host=$HOSTNAME$&srv=$SERVICEDESC$
+
+register 0
+
+}
+
+EOF
 
 cp /etc/httpd/conf.d/pnp4nagios.conf /etc/apache2/sites-enabled/
 
