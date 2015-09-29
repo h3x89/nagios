@@ -80,3 +80,5 @@ sudo service nagios start
 sudo service apache2 restart
 
 sudo ln -s /etc/init.d/nagios /etc/rcS.d/S99nagios
+
+chown nagios:nagios /usr/local/nagios/var
