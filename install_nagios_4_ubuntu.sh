@@ -30,9 +30,9 @@ cd nagios-4.1.1
 
 make all
 make install
+make install-commandmode
 make install-init
 make install-config
-#make install-commandmode
 #make install-webconf
 sudo /usr/bin/install -c -m 644 sample-config/httpd.conf /etc/apache2/sites-available/nagios.conf
 
