@@ -5,15 +5,14 @@
 # add check_mk server with client
 #
 
+sudo apt-get update
+sudo apt-get install apache2 build-essential libgd2-xpm-dev openssl libssl-dev xinetd apache2-utils wget php5 libapache2-mod-php5 curl unzip -y
 
 useradd nagios
 groupadd nagcmd
 usermod -a -G nagcmd nagios
 
-sudo apt-get update
-
-sudo apt-get install apache2 build-essential libgd2-xpm-dev openssl libssl-dev xinetd apache2-utils wget php5 libapache2-mod-php5 curl -y
-----------------
+#########################################
 
 cd ~
 
