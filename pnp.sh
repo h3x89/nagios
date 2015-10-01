@@ -55,7 +55,7 @@ echo 'host_perfdata_file_processing_command=process-host-perfdata-file' >> /usr/
 echo '' >> /usr/local/nagios/etc/nagios.cfg
 echo '#pnp4nagios configuration end' >> /usr/local/nagios/etc/nagios.cfg
 
-cat << EOF >> test
+cat << EOF >> /usr/local/nagios/etc/objects/commands.cfg
 
 define command{
        command_name    process-service-perfdata-file
