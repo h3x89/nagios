@@ -9,3 +9,5 @@ https://www.digitalocean.com/community/tutorials/how-to-install-nagios-4-and-mon
 http://www.techienote.com/pnp4nagios-on-ubuntu/
 
 https://docs.pnp4nagios.org/pnp-0.6/verify_pnp_config
+
+http://dev.vemarsas.it/documents/29
