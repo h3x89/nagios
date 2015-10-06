@@ -415,6 +415,9 @@ dpkg -i check-mk-agent_1.2.7i2p3-1_all.deb
 
 echo 127.0.0.1    nagios >> /etc/hosts
 echo "all_hosts = [ 'nagios' ]" >> /etc/check_mk/main.mk
+echo "all_hosts = [ 'nagios' ]" >> /etc/check_mk/main.mk
+echo "host_contactgroups = [( "admins",ALL_HOSTS),]" >> /etc/check_mk/main.mk
+echo "service_contactgroups = [( 'admins',ALL_HOSTS,[ "" ]),]" >> /etc/check_mk/main.mk
 
 cmk -Ivp
 cmk -Rvp
