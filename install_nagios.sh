@@ -36,6 +36,11 @@
 
 sudo apt-get update --fix-missing
 sudo apt-get install build-essential libgd2-xpm-dev apache2-utils unzip apache2 gcc php5 xinetd -y
+
+#Install mail sender
+sudo apt-get install mailutils -y
+echo "Mailbody" | mail -s "Testsubject" robert.h3x@gmail.com
+
 # Create Nagios User And Group
 # Create a new nagios user account:
 
