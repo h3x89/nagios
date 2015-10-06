@@ -546,3 +546,8 @@ cp /etc/httpd/conf.d/pnp4nagios.conf /etc/apache2/sites-enabled/
 /etc/init.d/apache2 restart
 
 rm -rf /usr/local/pnp4nagios/share/install.php
+
+sed 's/\/bin\/mail/mail/g' /usr/local/nagios/etc/objects/commands.cf
+echo"!!!!!!!!!!!!!!!!!!!!!11
+echo "remeber to chagne mail config in:"
+echo "/usr/local/nagios/etc/objects/contacts.cfg "
