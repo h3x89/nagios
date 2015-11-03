@@ -1,0 +1,35 @@
+for every wanted contacs - or contacs who should have new notyfication
+for plugin jira could be
+
+        #service_notification_commands notify-service-by-email
+        #host_notification_commands notify-host-by-email
+
+        host_notification_commands      notify-by-html-email-new
+        service_notification_commands   notify-by-html-email-new
+
+----------------------
+
+next should add info about new type of notyfication
+
+define command {
+    command_name   notify-by-html-email-new
+    #command_name   notify-by-email
+    #command_line   /etc/nagios/objects/notify-html-email https://nagios.qa-egnyte.com/nagios
+    command_line   /usr/local/nagios/etc/objects/notify-html-email https://nagios.qa-egnyte.com/nagios
+}
+
+----------------------
+to nagios config
+
+enable_environment_macros=1
+
+----------------------
+cpan -i MIME::Lite
+#!!!!!
+#CPAN.pm requires configuration, but most of it can be done automatically.
+#If you answer 'no' below, you will enter an interactive dialog for each
+#configuration option instead.#
+#
+#Would you like to configure as much as possible automatically? [yes]
+
+cpan -i URI::Escape
