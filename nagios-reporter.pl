@@ -136,16 +136,16 @@ while($str =~ /([^\n]+)\n?/g){
                 if ($documentation_response_code == 200) {
                   # $documentation_response_message="<br>HOW TO RESOLVE";
                   # $documentation_response_message='<img width="32" height="32" src="" alt="File Icon">';
-                  $documentation_response_message='<img width="32" height="32" src="data:image/png;base64,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"  alt="File Icon">';
+                  $documentation_response_message='<img width="32" height="32" src="https://egnyte.egnyte.com/dd/j2o70v3Guj"  alt="File Icon">';
                 } else {
                         # $documentation_response_message="<br>!!! $dupa !!!<br>DOCUMENTATION IS MISSING!<br>PLEASE CREATE IT!";
-                        $documentation_response_message='<img width="32" height="32" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADC0lEQVR4Ac1XhYodMRQdKFLvT9RwWaxYXd+8uguy/qT7G3V3V6zuhtdx1t3dXUZPcyphh3k7ZOoXDoTk3ntOPNHCmJG9Yr4di2YiV7/nxiK1iEdHCJZZxzb6aL/T2vasmIacNTsQ018J9CC5DkishSD2gHVsow99GcPYXyIXSVYhFv0EJt8riQMx3pexzBGeeMuCKU4ssh+JqMFe+UgUwVjmYC7mVCPPTpuFuH4X7EVu5OeQs8Y7InnrwJzMHUweTZsqyWM68O4N0NIQCmM1lRg6sx/IXuEdjbz1YG5yBPReP0ByGdTVjrA2bDooKa7CwPnDPhHMTY6U5MJhBWJRE4lxAe0tCGsjI2MoKK1FcUkN+i+fALKkCDA3OcjlG3rR8Nm34L4LaGpuR0VlAyqrGlOiXLQ1t3SCNjpqoLS8DsXl9SirbMTAjbOeNUEOcnmmQiyc7UjKLeYTYNk2TNMKhOM4oNFYtm0HpoDd2uzLSy5yft9yWyYhpr/m/EwkoL9/CF3d/ejuCYBo7+ruk+gfGAINHa2+vORyBSe5tbGsNXPFkPQhMfEIdHT2orG5XUxFhxLo2yliaMyR8rCKRfqQo8/ReH7LuU8h4JfNL0CuBXJrQsl9KgoS0NjUjvKKei42JdC3ScQECSAnuTU3N1LL7REkgAvKsuwwYEygAHKSWwjQR1nxt6eAIHc4AaYJt6AAoos+HtaxjT5hBKhMgTSnthbGmgisC5e52WU9y6xjG32kKUyByiL0EDkvX8FYvAT2pSuAC4Jl1rHNK0xlESIeyQi5DQXRaxhLhIgr1wiWWRd6G5Jb42EglAQdRKlFvBIiFi0iWEYKUzuIeBy6wUex3zjsN2/DWLaMYJl1SgJ8R7HKZeQld2FfvSHmXPT8+UuCZdaxTU2AvIwUr2PJbRiwrl77NuzPXsh6llnHNvoECvBfx+oPEm4xc9MWOE+e+TrKOrYFbkP/gyT8k8zt6JRlpTbmUHmSKT9K25tlWaGNOZiL5MGP0vDPcmVIcub+px+Tf/Y1+68/p//8e/4Fvz5OYHsUUGoAAAAASUVORK5CYII=" alt="File Icon">';
+                        $documentation_response_message='<img width="32" height="32" src="https://egnyte.egnyte.com/dd/LxwjscGy5g" alt="File Icon">';
 
                 }
-                print "DOC_RESPOSNSE:$dupa: $documentation_response_message\n";
+                # print "DOC_RESPOSNSE:$dupa: $documentation_response_message\n";
 
 
-                $line =~ s!</td></tr>!</td><td align="center"><a href=\"https://confluence.egnyte-it.com/display/MOPS/$dupa">$documentation_response_message</a></td> </tr>"!;
+                $line =~ s!</td></tr>!</td><td align="center"><a href=\"https://confluence.egnyte-it.com/display/MOPS/$dupa">$documentation_response_message</a></td> </tr>!;
                 # print "LINE2: $line\n";
         #         print "\n";
         #
@@ -169,6 +169,9 @@ while($str =~ /([^\n]+)\n?/g){
 
 }
 close FILE;
+
+# READ FILE TO VARIABLE
+my $mailbody = read_file( '/tmp/nagios-report-htmlout.html' ) ;
 
 
 #http_request($reporturl);
