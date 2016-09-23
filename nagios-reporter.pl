@@ -29,6 +29,8 @@
 
 use strict;
 use warnings;
+use File::Slurp;
+
 
 use Getopt::Long;
 use Net::SMTP;
